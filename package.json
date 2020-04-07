@@ -1,0 +1,15 @@
+{
+  "name": "htmlparams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prettier.config.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '*.html, *.css'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}

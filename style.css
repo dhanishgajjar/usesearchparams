@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+}
+
+.app {
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 18px 30px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+}
+
+.app img {
+  height: 300px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.app .info {
+  padding: 0 30px;
+}
+
+.info .name {
+  color: slategray;
+}
+
+.info .price {
+  color: dodgerblue;
+  font-size: 2em;
+  font-weight: 400;
+}

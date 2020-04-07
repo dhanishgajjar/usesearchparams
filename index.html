@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="pageTitle"></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app"></div>
+    <script>
+      const products = [
+        { name: 'iPhone 11 Pro Max', price: 1099, image: 'iphone.jpg' },
+        { name: 'Macbook Pro 16', price: 2799, image: 'macbookpro.jpg' },
+      ];
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const param = urlParams.get('product');
+
+      const docTitle = document.querySelector('.pageTitle');
+      const app = document.querySelector('.app');
+
+      const filtered = products.find((product) =>
+        product.name.toLowerCase().includes(param),
+      );
+
+      function renderProduct(product) {
+        const { name, price, image } = product;
+
+        docTitle.innerHTML = name;
+
+        app.innerHTML = `
+          <img src="${image}" alt="${name}" />
+          <div class="info">
+            <h2 class="name">${name}<h2>
+            <h3 class="price">$${price}</h3>
+          </div>
+        `;
+      }
+
+      renderProduct(filtered);
+    </script>
+  </body>
+</html>
